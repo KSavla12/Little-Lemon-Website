@@ -1,21 +1,20 @@
-import logo from './logo.svg';
-import Header from './Header';
-import Nav from './Nav';
-import Main from './Main';
-import Footer from './Footer';
+import Header from './components/Header';
+import Nav from './components/Nav';
+import Main from './components/Main';
+import Footer from './components/Footer';
 import './App.css';
 
 function App() {
   return (
     <>
 
-      <header/>
+      {/* <Header/> */}
 
-      <nav/>
+      <Nav/>
 
-      <main/>
+      <Main/>
 
-      <footer/>
+      <Footer/>
 
     </>
   );
