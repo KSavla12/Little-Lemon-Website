@@ -1,16 +1,17 @@
 import React from 'react'
 import logo from "../images/Logo .svg";
+import { Link } from "react-router-dom";
 
-const Nav = () => {
+const NavBar = () => {
   return (
     <nav id='navbar'>
       <img src={logo} alt="" />
       <ul className='nav-links'>
-        <a href="">
+        <Link to="/">
           <li>
             HOME
           </li>
-        </a>
+        </Link>
         <a href="">
           <li>
             ABOUT
@@ -41,4 +42,4 @@ const Nav = () => {
   )
 }
 
-export default Nav
+export default NavBar

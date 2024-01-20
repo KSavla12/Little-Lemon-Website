@@ -7,7 +7,6 @@ import basket from "../images/basket .svg";
 const Card = ({ title, price, description, imageSrc }) => {
   return (
     <Card_>
-      {/* <Image src={imageSrc} alt="" style={{borderRadius:'5% 5% 0 0'}}/> */}
       <img src={imageSrc} alt="" className="photo" style={{borderRadius:'5% 5% 0 0'}}/>
       <CardBody style={{padding:'12px', backgroundColor:'#DEDDDD'}}>
 
