@@ -5,8 +5,8 @@ import Highlights from '../components/Highlights'
 const HomePage = () => {
   return (
     <main>
-      <Hero />
-      <Highlights />
+        <Hero />
+        <Highlights />
     </main>
   )
 }

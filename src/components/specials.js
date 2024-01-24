@@ -1,21 +1,23 @@
 const specials = [
   {
-    title: "React Space",
-    price: "$4.00",
+    title: "Greek Salad",
+    price: "$8.99",
     description:
-      "Handy tool belt to create amazing AR components in a React app, with redux integration via middleware️",
+      "The famous greek salad of crispy lettuce, peppers, and olives, garnished with crunchy garlic and rosemary croutons.",
     getImageSrc: () => require("../images/greek salad.png"),
   },
   {
-    title: "React Infinite Scroll",
+    title: "Bruschetta",
+    price: "$6.99",
     description:
-      "Handy tool belt to create amazing AR components in a React app, with redux integration via middleware️",
+      "Our Bruschetta is made from grilled bread that has been smeared with garlic and seasoned with salt and olive oil.",
     getImageSrc: () => require("../images/Bruschetta2.png"),
   },
   {
-    title: "Photo Gallery",
+    title: "Lemon Special",
+    price: "$4.99",
     description:
-      "Handy tool belt to create amazing AR components in a React app, with redux integration via middleware️",
+      "This comes straight from grandma's recipe book, every last ingredient has been sourced and is as authentic as can be.",
     getImageSrc: () => require("../images/lemon dessert.png"),
   }
 ];

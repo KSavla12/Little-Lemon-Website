@@ -1,29 +1,13 @@
 import React from 'react'
 import BookingForm from '../components/BookingForm'
+import ConfirmedBooking from '../components/ConfirmedBooking'
 import { useState, useReducer, useEffect } from "react"
 import { fetchAPI, submitAPI } from '../components/bookingAPI'
-import { Route, Routes, useNavigate } from "react-router-dom";
-
+import { useNavigate } from "react-router-dom";
 const BookingPage = () => {
 
 //////////////////////////////////////////////////////
 
-  // const reducer = (availableTimes, action) => {
-
-  // }
-
-  // const [availableTimes, dispatch ] = useReducer(initializeTimes, updateTimes)
-  
-  // function updateTimes(availableTimes, date) {
-  //   return {availableTimes: fetchAPI(new Date(date))}
-  // }
-
-  // function initializeTimes() {
-  //   return ['17:00', '18:00', '19:00', '20:00', '21:00']
-  // }
-
-
-  /////////////////////////////////////////
   const [date, setDate] = useState(new Date())
  
   function initializeTimes(date) {
@@ -34,17 +18,20 @@ const BookingPage = () => {
     const dateObj = new Date(date)
     return fetchAPI(dateObj)
   }
-
-  const navigate = useNavigate();
+  
+  const [submited, setSubmitted] = useState(false)
+  const [data, setData] = useState('')
 
   function submitForm(formData) {
     const isSubmitted = submitAPI(formData);
 
     if (isSubmitted) {
-      navigate("/confirmed");
+      setData(formData)
+      setSubmitted(true)
     }
   }
-  
+
+
   function reducer(state, action) {
     let newState
     switch (action.type) {
@@ -64,7 +51,10 @@ const BookingPage = () => {
 
   return (
     <>
-      <BookingForm availableTimes={availableTimes} dispatch={dispatch} submitForm={submitForm}/>
+      {!submited 
+        ? <BookingForm availableTimes={availableTimes} dispatch={dispatch} submitForm={submitForm}/>
+        : <ConfirmedBooking/>
+      }
     </>
   )
 }

@@ -1,23 +1,26 @@
 import React from 'react'
-import small_logo from "../images/Logo .svg"
+import small_logo from "../images/footerLogo.png"
+import { NavLink } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <div id="footer">
+    <footer id="footer">
       <section>
-        {/* <div className="company-info">
-          <img src={small_logo} alt=""/>
-          <p>
-            We are a family owned Mediterraneran restaurant, focused on traditional recipes servred with a modern twist.
-          </p>
-        </div> */}
         <div>
           <h3>Pages</h3>
         <ul>
-          <li><a href="/">Home</a></li><br/>
+          <NavLink to="/">
+            <li>
+              Home
+            </li>
+          </NavLink><br/>
           <li><a href="/">About</a></li><br/>
           <li><a href="/">Menu</a></li><br/>
-          <li><a href="/">Reservations</a></li><br/>
+          <NavLink to="/booking">
+            <li>
+            Reservations
+            </li>
+          </NavLink><br/>
           <li><a href="/">Order Online</a></li><br/>
           <li><a href="/">Login</a></li>
         </ul>
@@ -37,12 +40,15 @@ const Footer = () => {
             <li><a href="/">Instagram</a></li><br/>
             <li><a href="/">Twitter</a></li>
           </ul>
+          <div className="company-info">
+            <img src={small_logo} alt=""/>
+          </div>
         </div>
       </section>
       <div className='copyright'>
         <p>&copy; 2024 Little Lemon Ltd. All rights reserved.</p>
       </div>
-    </div>
+    </footer>
   )
 }
 

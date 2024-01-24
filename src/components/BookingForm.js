@@ -1,11 +1,14 @@
 import React from 'react'
 import { useState } from "react"
 
+import Button from 'react-bootstrap/Button';
+import Col from 'react-bootstrap/Col';
+import Form from 'react-bootstrap/Form';
+import Row from 'react-bootstrap/Row';
+
 const BookingForm = (props) => {
 
-  // const [formData, setFormData] = useState({
-    
-  // }) 
+  let formData_ = ''
 
   const submitForm = (e) => {
     e.preventDefault()
@@ -13,45 +16,68 @@ const BookingForm = (props) => {
     const formData = new FormData(e.target)
     const payload = Object.fromEntries(formData)
 
-    console.log(payload)
+    formData_ = payload
+
     props.submitForm(payload)
   }
+
 
   return (
     <section id="form">
       <h2>Reserve a table</h2>
-      <form style={{display:"grid", maxWidth:"200px", gap:"20px"}} onSubmit={submitForm}>
-        <div className='user-details'>
-          <div className='col col-1'>
-            <label htmlFor="res-name">Full name</label>
-            <input type="text" id="res-name" placeholder="Enter full name" name='fullName' required></input>
-          </div>
-          <div className='col col-2'>
-            <label htmlFor="res-date">Choose date</label>
-            <input type="date" id="res-date" name='date' required></input>
-          </div>
-          <div className='col col-3'>
-            <label htmlFor="res-time">Choose time</label>
-            <select id="res-time" name='time'>
+      <Form onSubmit={submitForm}>
+        
+        <Row className="mb-3">
+          <Form.Group as={Col} lg={4}>
+            <Form.Label htmlFor="res-firstName">First name</Form.Label>
+            <Form.Control type="text" id="res-first-name" placeholder="First name" name='firstName' required />
+          </Form.Group>
+
+          <Form.Group as={Col} lg={4}>
+            <Form.Label htmlFor="res-lastName">Last name</Form.Label>
+            <Form.Control type="text" id="res-last-name" placeholder="Last name" name='lastName' required />
+          </Form.Group>
+
+          <Form.Group as={Col}>
+            <Form.Label htmlFor="res-email">Email</Form.Label>
+            <Form.Control type="email" id="res-date" name='email' placeholder="Email" required />
+          </Form.Group>
+        </Row>
+
+        <Row className="mb-3">
+          <Form.Group as={Col} sm={6}>
+            <Form.Label htmlFor="res-date">Date</Form.Label>
+            <Form.Control type="date" id="res-date" name='date' required />
+          </Form.Group>
+
+          <Form.Group as={Col} sm={6}>
+            <Form.Label htmlFor="res-time">Time</Form.Label>
+            <Form.Select id="res-time" name='time'>
               {props.availableTimes.map((times) =>
                 <option key={times}>{times}</option>
               )}
-            </select>
-          </div>
-          <div className='col col-4'>
-            <label htmlFor="guests">Number of guests</label>
-            <input type="number" placeholder="1" min="1" max="10" id="guests" name='guests' defaultValue={1}></input>
-          </div>
-          <div className='col col-5'>
-            <label htmlFor="occasion">Occasion</label>
-            <select id="occasion" name='occasion'>
-                <option>Birthday</option>
-                <option>Anniversary</option>
-            </select>
-          </div>
-        </div>
-        <button type="submit">Submit</button>
-      </form>
+            </Form.Select>
+          </Form.Group>
+        </Row>
+
+        <Row className="mb-3">
+          <Form.Group as={Col} sm={6}>
+            <Form.Label htmlFor="guests">Number of guests</Form.Label>
+            <Form.Control type="number" placeholder="1" min="1" max="10" id="guests" name='guests' defaultValue={1} />
+          </Form.Group>
+
+          <Form.Group as={Col} sm={6}>
+            <Form.Label htmlFor="occasion">Occasion</Form.Label>
+            <Form.Select id="occasion" name='occasion'>
+              <option>Birthday</option>
+              <option>Anniversary</option>
+            </Form.Select>
+          </Form.Group>
+        </Row>
+        
+        <Button type="submit">Submit</Button>
+      </Form>
+      
     </section>
   )
 }
