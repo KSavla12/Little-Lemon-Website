@@ -13,7 +13,9 @@ const ConfirmedBooking = (props) => {
       </div> 
 
       <div className='display-message'>
-        <p>We look forward to see you !</p>
+        <p>Dear <span style={{fontWeight:"bold"}}>{props.formData.firstName} {props.formData.lastName}</span>,</p>
+        <p>Your table for party of {props.formData.guests} is reserved for {props.formData.time}pm at {props.formData.date}.</p>
+        <p>We will see you soon for the {props.formData.occasion} event!</p>
       </div>
 
     </section>

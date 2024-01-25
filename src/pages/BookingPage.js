@@ -53,7 +53,7 @@ const BookingPage = () => {
     <>
       {!submited 
         ? <BookingForm availableTimes={availableTimes} dispatch={dispatch} submitForm={submitForm}/>
-        : <ConfirmedBooking/>
+        : <ConfirmedBooking formData={data}/>
       }
     </>
   )
