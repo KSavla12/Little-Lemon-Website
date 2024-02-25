@@ -1,9 +1,8 @@
-import Header from './components/Header';
-import NavBar from './components/NavBar';
-import HomePage from './pages/HomePage';
-import Footer from './components/Footer';
-import BookingPage from './pages/BookingPage';
-import ConfirmedBooking from "./components/ConfirmedBooking";
+import NavBar from './components/layout/NavBar';
+import HomePage from './components/pages/HomePage';
+import Footer from './components/layout/Footer';
+import BookingPage from './components/pages/BookingPage';
+import ConfirmedBooking from "./components/pages/Bookings/ConfirmedBooking";
 import './App.css';
 import { BrowserRouter , Route, Routes } from "react-router-dom"
 

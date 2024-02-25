@@ -1,0 +1,145 @@
+#form {
+  padding: 60px 25% 0% 25%;
+  background-color: var(--primary1);
+}
+
+#form h2 {
+  padding-bottom: 20px;
+  color: var(--primary2);
+}
+
+#form .grid {
+  grid-template-columns: 1fr 1fr;
+  column-gap: 30px;
+  padding-bottom: 10%;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  max-width: 22rem;
+  min-width: 340px;
+  margin: 20px auto;
+  justify-content: center;
+}
+
+label {
+  font-weight: bold;
+  padding-bottom: 6px;
+  color: var(--secondary3);
+}
+
+input, select {
+  height: 2.5rem;
+  padding-inline-end: 1rem;
+  padding-inline-start: 1rem;
+  outline: none;
+  border: 0.2rem solid #e0e0e0;
+  border-radius: 0.375rem;
+  background: #FFFFFF;
+  color: #495E57;
+  cursor: pointer;
+  transition: border-color 0.3s;
+  font-family: Karla, sans-serif;
+  font-size: 12pt;
+  color: var(--primary1);
+}
+input:focus, select:focus {
+  border-width: 0.2rem;
+  border-color: var(--secondary1);
+}
+
+
+.radio {
+  display: inline-flex;
+  align-items: center;
+}
+.radio input {
+  margin: 0 0.5em 0;
+  width: 18px;
+  accent-color: var(--secondary1);
+}
+
+.form-details {
+  font-size: 10px;
+  margin: 0 auto;
+  /* border: 0.2rem dotted #e0e0e01a;
+  border-radius: 0.375rem; */
+}
+.form-details td {
+  padding: 12px 22px;
+}
+.form-details p {
+  font-size: 18px;
+  color: var(--secondary3);
+}
+.table-detail-last {
+  text-align: center;
+}
+
+#form button {
+  background-color: var(--primary2);
+  border-radius: 12px;
+  height: 50px;
+  align-self: center;
+  justify-self: center;
+  cursor: pointer;
+  padding: 10px 15px;
+  text-align: center;
+  transition: 30ms;
+  width: 50%;
+  box-sizing: border-box;
+  border: 0;
+  font-size: 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+#form button:not(:disabled):hover,
+#form button:not(:disabled):focus {
+  outline: 0;
+  background: #ffd500;
+  box-shadow: 0 0 0 2px rgba(0,0,0,.2), 0 3px 8px 0 rgba(0,0,0,.15);
+}
+#form button:disabled {
+  filter: saturate(0.2) opacity(0.5);
+  -webkit-filter: saturate(0.2) opacity(0.5);
+  cursor: not-allowed;
+}
+
+#form span {
+  font-size: 20px;
+}
+
+@media (max-width: 1430px) {
+  #form {
+    padding: 50px 20% 0% 20%;
+  }
+}
+@media (max-width: 1190px) {
+  #form {
+    padding: 50px 12% 0% 12%;
+  }
+}
+@media (max-width: 950px) {
+  #form .grid {
+    grid-template-columns: 1fr;
+  }
+  #form button {
+    margin-top: 12px;
+  }
+}
+@media (max-width: 460px) {
+  .form-field {
+    min-width: 280px;
+  }
+  .form-details td {
+    padding: 12px 15px;
+  }
+}
+
+
+
+
+
+

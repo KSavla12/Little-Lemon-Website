@@ -1,0 +1,31 @@
+#form-display {
+  background-color: white;
+  padding: 60px 25% 40px 25%;
+
+  grid-template-columns: 1fr 1fr;
+  column-gap: 50px;
+
+  align-items: center;
+  text-align: center;
+}
+
+#form-display img {
+  max-width: 300px;
+  height: 250px;
+  object-fit: cover;
+  object-position: 0 100%;
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 1130px) {
+  #form-display {
+    padding: 60px 15% 60px 15%;
+  }
+}
+@media (max-width: 700px) {
+  #form-display {
+    grid-template-columns: 1fr;
+  }
+}

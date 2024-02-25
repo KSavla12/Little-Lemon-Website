@@ -1,0 +1,101 @@
+.hero {
+  background-color: var(--primary1);
+  --s: 150px; /* control the size */
+  --c1: var(--primary1);
+  --c2: #465a5380;
+
+  --_g: 
+    var(--c1) 0%  5% ,var(--c2) 6%  15%,var(--c1) 16% 25%,var(--c2) 26% 35%,var(--c1) 36% 45%,
+    var(--c2) 46% 55%,var(--c1) 56% 65%,var(--c2) 66% 75%,var(--c1) 76% 85%,var(--c2) 86% 95%,
+    #0000 96%;
+  background:
+    radial-gradient(50% 50% at 100% 0,var(--_g)),
+    radial-gradient(50% 50% at 0 100%,var(--_g)),
+    radial-gradient(50% 50%,var(--_g)),
+    radial-gradient(50% 50%,var(--_g)) calc(var(--s)/2) calc(var(--s)/2)
+    var(--c1);
+  background-size: var(--s) var(--s);
+  
+  padding: 90px 0%;
+  min-height: 260px;
+}
+
+
+#hero-section {
+ grid-template-columns: 2fr 1fr;
+ gap: 2rem
+}
+
+.hero-info {
+  grid-column: 1;
+  max-width: 600px;
+  z-index: 1;
+  margin: auto 0;
+}
+
+.hero-img {
+  grid-column: 2;
+
+  min-width: 260px;
+  max-width: 92%;
+  margin-bottom: -8.375rem;
+  object-fit: contain;
+  box-shadow: 10px 10px 19px 0px rgba(0,0,0,0.5);
+
+  border-radius: 8px;
+  border-bottom-right-radius:120px;
+  border-top-left-radius:120px;
+
+}
+
+#hero-section h1 {
+  color: var(--primary2);
+  font-size: 42pt;
+  height: 56px;
+}
+
+#hero-section h3 {
+  color: var(--secondary3);
+  font-family: "Markazi Text", serif;
+  font-weight: 500;
+}
+
+#hero-section p {
+  color: var(--secondary3);
+  font-size: 14pt;
+  padding: 14px 0 24px 0;
+  line-height: 1.5;
+}
+
+@media (max-width: 695px) {
+ .hero-img {
+  margin-bottom: 0;
+  min-width: 200px;
+  margin: auto 0;
+  }
+ .hero {
+  padding: 60px 0%;
+  }
+
+}
+@media (max-width: 548px) {
+  .hero-img {
+    position: absolute;
+    opacity: 40%;
+    width: 20px;
+    justify-self: end;
+  }
+   #hero-section {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 548px) {
+  #hero-section {
+    text-align: center;
+  }
+   .hero-img {
+    opacity: 0%;
+  }
+
+}
+

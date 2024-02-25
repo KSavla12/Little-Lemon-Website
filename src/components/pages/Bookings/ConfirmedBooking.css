@@ -1,0 +1,23 @@
+#confirmation {
+  padding: 5% 20% 24% 20%;
+
+  border-top: 6px;
+  border-style: solid;
+  border-color: var(--primary1);
+}
+
+.confirm-title {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.confirm-title h2 {
+  display:inline-block;
+  padding-right: 8px;
+}
+
+.display-message {
+  background-color: var(--primary2);
+  padding: 4%;
+  border-radius: 12px;
+}
