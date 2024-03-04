@@ -40,7 +40,11 @@ const NavBar = () => {
         </li>
  
         <li>
-          <NavLink to="/">ABOUT</NavLink>
+          <NavLink 
+            to="booking" 
+            className={({ isActive }) => isActive ? 'active-page' : null}>
+            RESERVATIONS
+          </NavLink>
         </li>
 
         <li>
@@ -49,9 +53,9 @@ const NavBar = () => {
       
         <li>
           <NavLink 
-            to="booking" 
+            to="/location"
             className={({ isActive }) => isActive ? 'active-page' : null}>
-            RESERVATIONS
+            LOCATION
           </NavLink>
         </li>
          

@@ -1,0 +1,56 @@
+#location {
+  background-color: rgb(255, 255, 255);
+  min-height: 260px;
+
+  border: 6px 0px 0px 0px;
+  border-style: solid;
+  border-color: var(--primary1) white white white;
+}
+
+#location .container {
+  padding-top: 4%;
+  padding-bottom: 4%;
+}
+
+.location-details {
+  grid-template-columns: 1fr 1fr;
+}
+
+.contact {
+
+}
+
+.times {
+  direction: rtl
+}
+
+.map {
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(201, 201, 201);
+}
+
+#location h4 {
+  font-size: 22px;
+}
+
+#location p {
+  font-size: 16px;
+}
+
+iframe {
+  width: 100%;
+  height: 300px;
+
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 3px;
+  border-color: black;
+}
+
+@media (max-width: 460px) {
+  iframe {
+    height: 450px;
+  }
+}

@@ -10,7 +10,6 @@ const ConfirmedBooking = (props) => {
 
   return (
     <section id="confirmation">
-      <div className='line-header'></div>
 
       <div className='confirm-title'>
         <h2>Reservation Confirmed</h2>
