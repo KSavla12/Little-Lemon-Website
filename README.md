@@ -12,6 +12,7 @@ Equipped with intricate design and responsive features, including the capability
 
 <img src="src/components/layout/assets/screenshot1.png" width="480">
 <img src="src/components/layout/assets/screenshot2.png" width="480">
+<img src="src/components/layout/assets/screenshot3.png" width="480">
 
 ------
 
